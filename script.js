@@ -1,5 +1,5 @@
 let H2 = document.getElementById ("Titulo");  
-H2.innerText= "Formulario (Titulo Nuevo)" 
+H2.innerText= "Formulario" 
 
 let miFormulario = document.getElementById("Formulario") ; 
 miFormulario.addEventListener ("submit", validarFormulario); 
@@ -54,7 +54,11 @@ function agregarDatos(evento) {
     document.getElementById("reset").click();
 }
 
+let btnGuardar = document.getElementById("guardar")
 
+btnGuardar.onclick = () => {
+    localStorage.setItem ( "listaDatos", JSON.stringify(datos) );
+}
 
 
 
